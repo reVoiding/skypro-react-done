@@ -44,7 +44,7 @@ export default class Timer extends Component {
 
   countDown = () => {
     if (this.state.time !== 0) {
-      this.setState((prevState) => ({ time: prevState.time + 1 }))
+      this.setState((prevState) => ({ time: prevState.time - 1 }))
     }
   }
 
