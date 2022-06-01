@@ -1,8 +1,12 @@
-import MinMaxClass from './components/MinMaxClass'
+import ReacTimer from './components/ReactTimer'
+import Clock from './components/Clock'
+import Pomodoro from './components/Pomodoro'
 
 const App = () => (
   <div>
-    <MinMaxClass minValue={0} maxValue={9} />
+    <ReacTimer />
+    <Clock />
+    <Pomodoro />
   </div>
 )
 
