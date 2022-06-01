@@ -1,8 +1,8 @@
-import Timer from './components/Timer'
+import MinMaxClass from './components/MinMaxClass'
 
 const App = () => (
   <div>
-    <Timer />
+    <MinMaxClass minValue={0} maxValue={9} />
   </div>
 )
 
