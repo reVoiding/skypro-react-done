@@ -1,12 +1,10 @@
-import ReacTimer from './components/ReactTimer'
-import Clock from './components/Clock'
-import Pomodoro from './components/Pomodoro'
+import MinMax from './components/MinMax'
+import Square from './components/Square'
 
 const App = () => (
   <div>
-    <ReacTimer />
-    <Clock />
-    <Pomodoro />
+    <MinMax />
+    <Square />
   </div>
 )
 
