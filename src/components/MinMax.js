@@ -1,12 +1,12 @@
 const MinMax = ({ min = 1, max, current, onChange }) => {
-  function applyCurrent(num) {
+  const applyCurrent = (num) => {
     const validNum = Math.max(min, Math.min(max, num))
-    onChange(validNum)
+    return onChange(validNum)
   }
 
-  function parseCurrent(e) {
+  const parseCurrent = (e) => {
     const num = parseInt(e.target.value, 10)
-    applyCurrent(Number.isNaN(num) ? min : num)
+    return applyCurrent(Number.isNaN(num) ? min : num)
   }
 
   const inc = () => applyCurrent(current + 1)

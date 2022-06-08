@@ -1,10 +1,10 @@
-import MinMax from './components/MinMax'
-import Square from './components/Square'
+import BookCart from './components/BookCart'
+import LoginPass from './components/LoginPass'
 
 const App = () => (
   <div>
-    <MinMax />
-    <Square />
+    <BookCart />
+    <LoginPass />
   </div>
 )
 
