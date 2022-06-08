@@ -1,61 +1,14 @@
-# 5.4. Жизненные циклы компонент (lifecycle)
 
-## Задание
+# Задание урок 5.6 Hooks
 
-1 .Используя скелет компоненты, допишите код таймера до рабочего:
+1. Доработать финальный пример с урока:
+    - У каждого товара есть кнопка удаления из корзины.
+    - Рассчитывается финальная стоимость заказа.
+2. Реализовать пользовательский хук useInputRequired().
+- Для этого написать отдельный компонент LoginPass, с двумя формами `<input>`
 
-- В методах жизненных циклов определите взаимодействие с состоянием.
-- Опишите события по кликам на кнопки.
+ Login Password соответственно. На которых и реализовать Hook с проверками.
 
-```jsx
-import React from 'react'
-import './styles.css'
+- В данном хуке, помимо возвращаемого значения и функций изменения(`onChange`), на событие `onBlur` повесить логику обязательного/необязательного поля с возможностью передачи флага `required` вторым параметром хука. Ошибка должна храниться отдельным состоянием. То есть, если поле ввода будет пустым и не в фокусе, то возникнет предупреждение, что данное поле обязательно должно быть заполнено
 
-export default class ReacTimer extends React.Component {
-  state = {
-    count: 0,
-    isCounting: false,
-  }
-
-  componentDidMount() {}
-
-  componentDidUpdate() {}
-
-  componentWillUnmount() {}
-
-  render() {
-    return (
-      <div className="ReacTimer">
-        <h1>React Timer</h1>
-        <h3>{this.state.count}</h3>
-        {!this.state.isCounting ? (
-          <button onClick={this.handleStart}>Start</button>
-        ) : (
-          <button onClick={this.handleStop}>Stop</button>
-        )}
-        <button onClick={this.handleReset}>Reset</button>
-      </div>
-    )
-  }
-}
-```
-
-2. **Написать классовый компонент Часы.**
-
-- Часы должны отображать реальное время и обновляться каждую секунду.
-- Используйте методы жизненного цикла.
-- Не забудьте очистить компонент перед размонтированием.
-
-3. ![star](https://user-images.githubusercontent.com/28350003/171338957-c0e81bca-26e1-47e3-9367-dd5636966cc2.png) **Написать компонент Pomodoro Tracker.**
-
-- Компонент из 3х кнопок и отображения обратного отсчёта:
-
-  - Work Time - запускает таймер обратного отсчёта на 30 мин.
-
-  - Long Break - запускает таймер обратного отсчёта на 15 мин.
-
-  - Short Break - запускает таймер обратного отсчёта на 7 мин.
-
-
-![image](https://user-images.githubusercontent.com/28350003/171354399-2970e52c-5db3-4cea-ae22-268533186a84.png)
-
+![image](https://user-images.githubusercontent.com/103576500/168039215-51caa213-1fdb-4605-afdc-82601ce23568.png)
